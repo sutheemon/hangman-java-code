@@ -22,7 +22,7 @@ public class Client {
         ObjectInputStream ois = null;
         int port = 9876;
         for(int i=0; i<5;i++){
-            socket = new Socket("127.0.0.1", port);
+            socket = new Socket("hangmanserver", port);
             oos = new ObjectOutputStream(socket.getOutputStream());
             System.out.println("Sending request to Socket Server");
             if(i==4)oos.writeObject("exit");
